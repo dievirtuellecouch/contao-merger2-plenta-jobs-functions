@@ -1,0 +1,15 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: false
+    public: false
+
+  DVC\MergerJobsFunctions\JobOffer\CurrentJobOfferResolver: ~
+
+  DVC\MergerJobsFunctions\JobOffer\EmploymentTypesParser: ~
+
+  DVC\MergerJobsFunctions\Functions\JobEmploymentTypeFunction:
+    arguments:
+      $pageProvider: '@cca.merger2.page_provider'
+    tags:
+      - { name: 'cca.merger2.function' }

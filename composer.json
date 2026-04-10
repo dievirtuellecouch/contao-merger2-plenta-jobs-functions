@@ -1,0 +1,28 @@
+{
+    "name": "dvc/contao-merger2-plenta-jobs-functions",
+    "description": "Additional merger2 functions for Plenta Jobs in Contao 5 projects",
+    "type": "contao-bundle",
+    "version": "1.1.0",
+    "require": {
+        "php": "^8.2",
+        "ext-json": "*",
+        "contao/core-bundle": "^5.3",
+        "dvc/merger2": "1.0.0",
+        "plenta/contao-jobs-basic-bundle": "^3.1"
+    },
+    "license": "LGPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Jonathan Hermann",
+            "email": "jh@d-v-c.net"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "DVC\\MergerJobsFunctions\\": "src/"
+        }
+    },
+    "extra": {
+        "contao-manager-plugin": "DVC\\MergerJobsFunctions\\ContaoManager\\Plugin"
+    }
+}
