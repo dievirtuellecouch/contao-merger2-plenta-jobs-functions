@@ -1,0 +1,10 @@
+services:
+  _defaults:
+    public: true
+
+  ContaoCommunityAlliance\Merger2\EventListener\Hook\LoadFunctionExplanationsListener:
+    arguments:
+      - '@cca.merger2.function_collection'
+      - '@twig'
+    tags:
+      - { name: 'kernel.event_listener', event: Contao\CoreBundle\Event\LoadLanguageFileEvent, method: __invoke }

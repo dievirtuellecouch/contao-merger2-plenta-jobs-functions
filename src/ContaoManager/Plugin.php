@@ -17,6 +17,9 @@ final class Plugin implements BundlePluginInterface
     public function getBundles(ParserInterface $parser): array
     {
         return [
+            BundleConfig::create(CcaMerger2Bundle::class)
+                ->setReplace(['merger2'])
+                ->setLoadAfter([ContaoCoreBundle::class]),
             BundleConfig::create(MergerJobsFunctionsBundle::class)
                 ->setLoadAfter([
                     ContaoCoreBundle::class,
